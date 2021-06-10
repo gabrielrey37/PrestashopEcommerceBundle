@@ -55,6 +55,21 @@ return array(
                 ],
                 'tag' => 'console.command',
             ],
+            'mautic.prestashopecommerce.command.importorders' => [
+                'class'     => \MauticPlugin\PrestashopEcommerceBundle\Command\PrestashopEcommerceImportOrdersCommand::class,
+                'arguments' => [
+                    'mautic.campaign.executioner.scheduled',
+                    'translator',
+                    'mautic.helper.template.formatter',
+                    'mautic.cart.model.cart',
+                    'mautic.order.model.order',
+                    'mautic.product.model.product',
+                    'mautic.lead.model.lead',
+                    'mautic.integration.PrestashopEcommerce',
+                    'mautic.helper.integration',
+                ],
+                'tag' => 'console.command',
+            ],
             'mautic.prestashopecommerce.command.importcustomers' => [
                 'class'     => \MauticPlugin\PrestashopEcommerceBundle\Command\PrestashopEcommerceImportCustomersCommand::class,
                 'arguments' => [
